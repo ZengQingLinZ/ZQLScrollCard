@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZQLScrollCard"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "A short description of ZQLTest."
 
   # This description is used to generate tags and improve search results.
@@ -64,7 +64,7 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-   #spec.swift_version = '4.1'
+   spec.swift_version = '4.1'
  
   # spec.platform     = :ios
    spec.platform     = :ios, "9.0"
@@ -148,13 +148,13 @@ Pod::Spec.new do |spec|
 
     spec.subspec 'OC' do |ss|
         ss.source_files = 'OC/**/*.{h,m,mm}'
-        ss.resource  = 'OC/**/*.{xib}'
+       # ss.resource  = 'OC/**/*.{xib}'
         ss.dependency "SDWebImage"
     end
 
     spec.subspec 'Swift' do |ss|
         ss.source_files = 'Swift/**/*.{h,m,mm,swift}'
-        ss.resource  = 'Swift/**/*.{xib}'
+       # ss.resource  = 'Swift/**/*.{xib}'
         ss.dependency "SDWebImage"
     end
 end
