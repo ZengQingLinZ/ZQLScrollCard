@@ -16,11 +16,9 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZQLScrollCard"
-<<<<<<< HEAD
-  spec.version      = "0.0.4"
-=======
-  spec.version      = "0.0.2"
->>>>>>> 9e8c4a44d168e95e6fee7975de3dcc563f7d85cf
+
+  spec.version      = "0.0.5"
+
   spec.summary      = "A short description of ZQLTest."
 
   # This description is used to generate tags and improve search results.
