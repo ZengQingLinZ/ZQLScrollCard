@@ -150,13 +150,13 @@ Pod::Spec.new do |spec|
 
     spec.subspec 'OC' do |ss|
         ss.source_files = 'OC/**/*.{h,m,mm}'
-       # ss.resource  = 'OC/**/*.{xib}'
+        ss.resource  = 'OC/**/*.{xib}'
         ss.dependency "SDWebImage"
     end
 
     spec.subspec 'Swift' do |ss|
         ss.source_files = 'Swift/**/*.{h,m,mm,swift}'
-       # ss.resource  = 'Swift/**/*.{xib}'
+        ss.resource  = 'Swift/**/*.{xib}'
         ss.dependency "SDWebImage"
     end
 end
