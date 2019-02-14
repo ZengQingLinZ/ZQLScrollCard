@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CourseCardView : UIView
+@interface OCCourseCardView : UIView
 @property (strong,nonatomic) UICollectionView *collectionView;
 @property (assign,nonatomic) NSInteger selectedIndex;
 @property (strong,nonatomic) NSArray *models;

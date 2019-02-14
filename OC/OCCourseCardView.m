@@ -19,16 +19,16 @@
 #import <UIKit/UIKit.h>
 #import "UIImageView+WebCache.h"
 
-#import "CourseCardView.h"
-#import "CourseCardFlowLayout.h"
-#import "CourseCardCell.h"
+#import "OCCourseCardView.h"
+#import "OCCourseCardFlowLayout.h"
+#import "OCCourseCardCell.h"
 
-@interface CourseCardView()<UICollectionViewDelegate,UICollectionViewDataSource,CAAnimationDelegate>
+@interface OCCourseCardView()<UICollectionViewDelegate,UICollectionViewDataSource,CAAnimationDelegate>
     
 @end
 
 
-@implementation CourseCardView
+@implementation OCCourseCardView
     
 - (void)setModels:(NSArray *)models{
     _models = models;
@@ -50,7 +50,7 @@
     
 - (UICollectionView *)createCollectionView{
     
-    CourseCardFlowLayout *layout = [[CourseCardFlowLayout alloc]init];
+    OCCourseCardFlowLayout *layout = [[OCCourseCardFlowLayout alloc]init];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     layout.sectionInset = UIEdgeInsetsMake(0, FIT_SCREEN_WIDTH(107) * 2, 0, FIT_SCREEN_WIDTH(107) * 2);    layout.minimumLineSpacing = -FIT_SCREEN_WIDTH(40);
     
@@ -76,7 +76,7 @@
 }
     
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    CourseCardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CourseCardCell" forIndexPath:indexPath];
+    OCCourseCardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CourseCardCell" forIndexPath:indexPath];
     NSInteger index = indexPath.row;
     
     cell.imgView.backgroundColor = [UIColor lightGrayColor];
@@ -95,7 +95,7 @@
     NSInteger centerIndex = [collectionView indexPathForItemAtPoint:pointInView].row?[collectionView indexPathForItemAtPoint:pointInView].row:0;
     
     if (index == centerIndex) { // 若点击的是中间位置的书，则选择完成
-        CourseCardCell *cell = (CourseCardCell *)[collectionView cellForItemAtIndexPath:indexPath];
+        OCCourseCardCell *cell = (OCCourseCardCell *)[collectionView cellForItemAtIndexPath:indexPath];
         [cell.imgView sd_setImageWithURL:[NSURL URLWithString:self.models[index]]];
         cell.nameLabel.text = @"";
         
@@ -131,32 +131,32 @@
     NSInteger index = [self.collectionView indexPathForItemAtPoint:pointInView].row?[self.collectionView indexPathForItemAtPoint:pointInView].row:0;
     
     
-    CourseCardCell *cellj2 = (CourseCardCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index - 2 inSection:0]];
+    OCCourseCardCell *cellj2 = (OCCourseCardCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index - 2 inSection:0]];
     
     if(cellj2){
         [self.collectionView bringSubviewToFront:cellj2];
     }
     
-    CourseCardCell *cella2 = (CourseCardCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index + 2 inSection:0]];
+    OCCourseCardCell *cella2 = (OCCourseCardCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index + 2 inSection:0]];
     
     if(cella2){
         [self.collectionView bringSubviewToFront:cella2];
     }
     
-    CourseCardCell *cellj1 = (CourseCardCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index - 1 inSection:0]];
+    OCCourseCardCell *cellj1 = (OCCourseCardCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index - 1 inSection:0]];
     
     if(cellj1){
         [self.collectionView bringSubviewToFront:cellj1];
     }
     
     
-    CourseCardCell *cella1 = (CourseCardCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index + 1 inSection:0]];
+    OCCourseCardCell *cella1 = (OCCourseCardCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index + 1 inSection:0]];
     
     if(cella1){
         [self.collectionView bringSubviewToFront:cella1];
     }
     
-    CourseCardCell *cell0 = (CourseCardCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
+    OCCourseCardCell *cell0 = (OCCourseCardCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
     
     if(cell0){
         [self.collectionView bringSubviewToFront:cell0];

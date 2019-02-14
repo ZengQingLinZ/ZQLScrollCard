@@ -6,9 +6,9 @@
 //  Copyright © 2019 曾清林. All rights reserved.
 //
 
-#import "CourseCardCell.h"
+#import "OCCourseCardCell.h"
 
-@implementation CourseCardCell
+@implementation OCCourseCardCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

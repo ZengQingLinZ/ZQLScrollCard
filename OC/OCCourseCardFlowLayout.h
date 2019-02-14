@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CourseCardFlowLayout : UICollectionViewFlowLayout
+@interface OCCourseCardFlowLayout : UICollectionViewFlowLayout
     @property (assign,nonatomic) CGFloat ActiveDistance;
     @property (assign,nonatomic) CGFloat ScaleFactor;
     @property (strong,nonatomic) UICollectionViewLayoutAttributes *attributes;

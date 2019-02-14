@@ -6,9 +6,9 @@
 //  Copyright © 2019 曾清林. All rights reserved.
 //
 
-#import "CourseCardFlowLayout.h"
+#import "OCCourseCardFlowLayout.h"
 
-@implementation CourseCardFlowLayout
+@implementation OCCourseCardFlowLayout
     
 - (instancetype)init
     {

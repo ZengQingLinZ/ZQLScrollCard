@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZQLScrollCard"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.3"
   spec.summary      = "A short description of ZQLTest."
 
   # This description is used to generate tags and improve search results.
@@ -64,7 +64,7 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-   #spec.swift_version = '4.1'
+   spec.swift_version = '4.1'
  
   # spec.platform     = :ios
    spec.platform     = :ios, "9.0"

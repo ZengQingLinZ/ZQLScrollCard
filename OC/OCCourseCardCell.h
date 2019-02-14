@@ -1,5 +1,5 @@
 //
-//  CourseCardCell.h
+//  OCCourseCardCell.h
 //  TestDEMO
 //
 //  Created by 曾清林 on 2019/1/25.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CourseCardCell : UICollectionViewCell
+@interface OCCourseCardCell : UICollectionViewCell
     @property (weak, nonatomic) IBOutlet UIView *containerView;
     @property (weak, nonatomic) IBOutlet UIImageView *imgView;
     @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
