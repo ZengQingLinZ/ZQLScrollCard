@@ -16,7 +16,11 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZQLScrollCard"
-  spec.version      = "0.0.3"
+<<<<<<< HEAD
+  spec.version      = "0.0.4"
+=======
+  spec.version      = "0.0.2"
+>>>>>>> 9e8c4a44d168e95e6fee7975de3dcc563f7d85cf
   spec.summary      = "A short description of ZQLTest."
 
   # This description is used to generate tags and improve search results.
@@ -148,13 +152,13 @@ Pod::Spec.new do |spec|
 
     spec.subspec 'OC' do |ss|
         ss.source_files = 'OC/**/*.{h,m,mm}'
-        ss.resource  = 'OC/**/*.{xib}'
+       # ss.resource  = 'OC/**/*.{xib}'
         ss.dependency "SDWebImage"
     end
 
     spec.subspec 'Swift' do |ss|
         ss.source_files = 'Swift/**/*.{h,m,mm,swift}'
-        ss.resource  = 'Swift/**/*.{xib}'
+       # ss.resource  = 'Swift/**/*.{xib}'
         ss.dependency "SDWebImage"
     end
 end
